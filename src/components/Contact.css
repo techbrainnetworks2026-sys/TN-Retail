@@ -1,0 +1,50 @@
+.contact-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.contact-intro h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.contact-intro p {
+  font-size: 1.1rem;
+}
+
+.contact-card {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-card h3 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.address {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact-info {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: var(--primary);
+  text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+.bg-light {
+}
+
+.about-card {
+  padding: 30px;
+}
+
+.about-card h3 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.team-section {
+  margin-top: 60px;
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.team-section h3 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.team-desc {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.founder-card {
+  display: inline-block;
+  padding: 20px 40px;
+  background: var(--background);
+  border-radius: 12px;
+  border-left: 4px solid var(--secondary);
+}
+
+.founder-card h4 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.founder-card p {
+  color: var(--secondary);
+  font-weight: 500;
+  margin: 0;
+}

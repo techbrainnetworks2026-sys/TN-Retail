@@ -1,0 +1,122 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 25px 0;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Default Logo (over dark hero) */
+.logo-container {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Scrolled Logo (over white bg) */
+.navbar-scrolled .logo-container {
+  color: var(--primary, #111827);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default Links (over dark hero) */
+.nav-links a {
+  color: white;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Scrolled Links (over white bg) */
+.navbar-scrolled .nav-links a {
+  color: #111827; /* Dark color for white bg */
+}
+
+.navbar-scrolled .nav-links a:hover {
+  color: #EAB308; /* Gold branding */
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+/* Default Hamburger (over dark hero) */
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+/* Scrolled Hamburger (over white bg) */
+.navbar-scrolled .menu-toggle .bar {
+  background-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links-mobile {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Mobile links are always on white background */
+  .nav-links a {
+    color: var(--text);
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+  
+  .nav-links a:hover {
+    color: var(--secondary);
+  }
+}

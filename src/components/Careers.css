@@ -1,0 +1,28 @@
+.careers-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+}
+
+.career-card {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.career-card h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.career-card p {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.career-btn {
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
