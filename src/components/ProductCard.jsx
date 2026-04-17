@@ -1,13 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ProductCard.css';
 import placeholderImage from '../assets/product-placeholder.png';
 
-const ProductCard = ({ title, index, icon: Icon, color }) => {
+const ProductCard = ({ product, index }) => {
+  const { id, title, icon: Icon, color } = product;
   const delay = (index % 4) * 0.1;
   const cardColor = color || 'var(--color-primary)';
   
   return (
-    <div className="card product-card fade-in" style={{ animationDelay: `${delay}s`, '--card-accent': cardColor }}>
+    <Link to={`/product/${id}`} className="card product-card fade-in" style={{ animationDelay: `${delay}s`, '--card-accent': cardColor, textDecoration: 'none', display: 'block' }}>
       <div className="product-image" style={{ background: `linear-gradient(135deg, #0A1628, #111)` }}>
         {Icon ? (
           <div className="product-icon-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: cardColor }}>
@@ -23,7 +25,7 @@ const ProductCard = ({ title, index, icon: Icon, color }) => {
       <div className="product-info">
         <h3 style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>{title}</h3>
       </div>
-    </div>
+    </Link>
   );
 };
 
